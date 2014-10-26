@@ -1,0 +1,7 @@
+slf4j.api;						version='1.7'
+jul.to.slf4j;					version='1.7'
+jcl.over.slf4j;					version='1.7'
+log4j.over.slf4j;				version='1.7'
+org.slf4j.osgi-over-slf4j;		version='1.7'
+osgi.utils.jul;					version=latest
+org.apache.sling.commons.log;	version='4.0'

@@ -1,0 +1,20 @@
+-buildpath:  \
+	biz.aQute.bnd.annotation,\
+	cnf.run.jpa.springdata,\
+	lombok,\
+	osgi.jpa.tx
+Bundle-Version: 0.0.0.${tstamp}
+DynamicImport-Package: *
+Export-Package:  \
+	simple.web.blog.data
+Include-Resource:  \
+	{${Meta-Persistence}=src/persistence.xml}
+JPA-Repositories: ${classes;IMPLEMENTS;org.springframework.data.jpa.repository.JpaRepository}
+Meta-Persistence: persistence.xml
+Private-Package:  \
+	simple.web.blog.data.jpa
+Service-Component:  \
+	*
+entity.classes: ${classes;ANNOTATION;javax.persistence.Entity}
+entity.path: ${path;${entity.classes}}
+entity.xml: <class>${replace;${entity.path};(${pathseparator});</class>\n    <class>}</class>

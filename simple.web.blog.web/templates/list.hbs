@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Posts</title>
+        
+        {{#resource type="css"}}
+		   /css/app.css
+		{{/resource}}
+
+	</head>
+	<body>
+	   <div class="container">
+	   <div class="row">
+	   <div class="col-md-10">
+    		<h2>Posts</h2>
+       </div>
+       </div>	
+       <div class="row">
+       <div class="col-md-10 text-right">
+            <a href="/blog/create" class="btn btn-default">
+                <span class="glyphicon glyphicon-plus"></span>
+                New Post
+            </a>
+       </div>
+       </div>
+       <div class="row">
+       <div class="col-md-10">     
+    		<table class="table table-striped">
+                <thead>
+                    <th>#id</th>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>&nbsp;</th>
+                </thead>
+        		{{#html-table-content columns="id, title, content" resource="blog"}}
+        		{{/html-table-content}}
+    		</table>
+       </div>
+       </div>
+       <div class="row">
+       <div class="col-md-10 text-right">
+    		{{#html-pagination}}
+    		{{/html-pagination}}
+       </div>
+       </div>
+       </div>
+    
+	   {{#resource type="javascript"}}
+		   /js/app.js
+	   {{/resource}}
+
+</body>
+</html>

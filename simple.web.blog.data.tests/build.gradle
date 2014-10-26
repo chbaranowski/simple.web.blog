@@ -1,0 +1,10 @@
+apply plugin: "groovy"
+
+sourceSets {
+    main {
+        groovy {
+            srcDirs = ['src']
+            compileClasspath = compileJava.classpath
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Post</title>
+        
+        {{#resource type="css"}}
+		   /css/app.css
+		{{/resource}}
+
+	</head>
+	<body>
+	   <div class="container">
+	   <div class="row">
+	   <div class="col-md-10">
+    		<h2>Post</h2>
+    		<form action="/blog/save" method="post">
+    		  {{#html-input field="id"           type="hidden"    }}{{/html-input}}
+    		  {{#html-input field="title"        title="Title"    }}{{/html-input}}
+    		  {{#html-input field="content"      title="Content"  }}{{/html-input}}
+    		  <button type="submit" class="btn btn-primary">Save</button>
+    		  <a href="/blog" class="btn btn-default">Cancel</a>
+    		</form>
+       </div>
+       </div>
+       </div>
+    
+	   {{#resource type="javascript"}}
+		   /js/app.js
+	   {{/resource}}
+
+</body>
+</html>

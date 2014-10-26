@@ -1,0 +1,7 @@
+Bundle-Version: 0.0.0.${tstamp}
+
+Web-ContextPath: /ui
+Jetty-WarFolderPath: static
+
+-includeresource: \
+	static=dist

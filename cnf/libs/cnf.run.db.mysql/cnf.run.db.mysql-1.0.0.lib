@@ -1,0 +1,4 @@
+com.mysql.jdbc;							version='5.1'
+org.eclipse.gemini.dbaccess.mysql;		version='1.1'
+org.eclipse.gemini.dbaccess.util;		version='1.1'
+osgi.enterprise;						version='[4.2,5.0)'

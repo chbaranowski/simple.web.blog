@@ -1,0 +1,6 @@
+cnf.run.base
+cnf.run.http.jetty
+org.apache.felix.webconsole
+org.apache.felix.webconsole.plugins.ds
+osgi.web.halbrowser
+aQute.xray.plugin

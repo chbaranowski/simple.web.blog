@@ -1,0 +1,9 @@
+osgi.enterprise;                    version='[4.2,5.0)'
+org.apache.felix.scr;				version='[1.8,1.9)'
+org.apache.felix.configadmin;		version='[1.8,1.9)'
+org.apache.felix.metatype;			version='[1.0,1.1)'		
+org.apache.felix.coordinator;		version='1.0'
+org.yaml.snakeyaml
+osgi.configuration.yaml
+cnf.run.logger
+org.apache.commons.lang3

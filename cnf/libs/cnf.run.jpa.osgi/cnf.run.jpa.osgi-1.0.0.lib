@@ -1,0 +1,3 @@
+cnf.run.jpa.springdata;						version=1.0.0
+osgi.jpa.tx;								version=latest
+osgi.jpa.springdata;						version=latest

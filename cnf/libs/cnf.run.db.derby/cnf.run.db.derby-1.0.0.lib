@@ -1,0 +1,4 @@
+org.apache.derby;						version='[10.8,10.9)'
+org.eclipse.gemini.dbaccess.derby;		version='[1.1,1.2)'
+org.eclipse.gemini.dbaccess.util;		version='[1.1,1.2)'
+osgi.enterprise;						version='[4.2,5.0)'

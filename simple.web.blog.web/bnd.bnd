@@ -1,0 +1,35 @@
+-buildpath:  \
+	osgi.core,\
+	biz.aQute.bnd.annotation,\
+	cnf.run.http.rest,\
+	cnf.run.jpa.springdata,\
+	halbuilder-api,\
+	halbuilder-core,\
+	halbuilder-json,\
+	osgi.web.common,\
+	simple.web.blog.data,\
+	lombok
+
+Bundle-Version: 0.0.0.${tstamp}
+
+Web-ContextPath: /sample
+Jetty-WarFolderPath: static
+
+-includeresource: \
+	static=static,\
+	templates=templates
+	
+Require-Capability: \
+	angular.js,\
+	angular-resource.js,\
+	bootstrap.css,\
+    bootstrap.js
+
+Private-Package:  \
+	sample.webapp.web	
+
+Service-Component: \
+	*
+
+Import-Package:  \
+	*

@@ -2,7 +2,9 @@
 	biz.aQute.bnd.annotation,\
 	cnf.run.jpa.springdata,\
 	lombok,\
-	osgi.jpa.tx
+	osgi.jpa.tx,\
+	osgi.web.common
+
 Bundle-Version: 0.0.0.${tstamp}
 DynamicImport-Package: *
 Export-Package:  \

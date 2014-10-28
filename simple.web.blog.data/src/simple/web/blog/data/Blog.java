@@ -1,22 +1,22 @@
 package simple.web.blog.data;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-import lombok.Data;
+import aQute.bnd.annotation.ProviderType;
 
+@ProviderType
 @Entity
-@Data
 public class Blog {
 
     @Id 
     @GeneratedValue(strategy=GenerationType.AUTO) 
-    private Long id;
+    public Long id;
     
-    private String title;
+    public String title;
     
-    private String content;
+    public String content;
     
 }

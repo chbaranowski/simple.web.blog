@@ -12,7 +12,7 @@ import spock.lang.*
 
 class BlogResourceSpec extends Specification {
 
-    @OSGiServiceRegistration
+    @OSGiServiceRegistration(properties=["transactional.service = true"])
     BlogRepository mockBlogRepository
     
     def setup() {

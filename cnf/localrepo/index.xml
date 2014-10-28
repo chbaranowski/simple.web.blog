@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repository increment="1414331376653" name="Bundles" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository increment="1414532811274" name="Bundles" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="aQute.xray.plugin"/>
@@ -16892,29 +16892,82 @@
   </resource>
   <resource>
     <capability namespace="osgi.identity">
-      <attribute name="osgi.identity" value="osgi.jpa.tx"/>
+      <attribute name="osgi.identity" value="osgi.jpa.springdata"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.1.0.201410260944"/>
+      <attribute name="version" type="Version" value="0.2.0.201410282140"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="4934508b17166b577c082fcabe4ff467d3ac606a8a8b69b6b21db316974cf790"/>
-      <attribute name="url" value="osgi.jpa.tx/osgi.jpa.tx-0.1.0.jar"/>
-      <attribute name="size" type="Long" value="15245"/>
+      <attribute name="osgi.content" value="cd2c9a17f25276bb906f264398a53bc2aaedda7a53c5e6f36043ce5a7d972b27"/>
+      <attribute name="url" value="osgi.jpa.springdata/osgi.jpa.springdata-0.2.0.jar"/>
+      <attribute name="size" type="Long" value="7214"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="osgi.jpa.springdata"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="osgi.jpa.springdata"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.persistence)(version&gt;=2.1.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.springframework.data.jpa.repository.support)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.springframework.util)(version&gt;=4.0.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=osgi.persistence)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=osgi.persistence.TransactionManager)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="osgi.jpa.tx"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="0.2.0.201410282139"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="d57874e83cd3ac6895fd91699d0920ff2b1aebc8100991ed6fcaffb86e88721e"/>
+      <attribute name="url" value="osgi.jpa.tx/osgi.jpa.tx-0.2.0.jar"/>
+      <attribute name="size" type="Long" value="15291"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="osgi.jpa.tx"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410260944"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282139"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="osgi.jpa.tx"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410260944"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282139"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="osgi.persistence"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.jpa.tx"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410260944"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282139"/>
       <directive name="uses" value="javax.persistence"/>
     </capability>
     <capability namespace="osgi.service">
@@ -16958,197 +17011,197 @@
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="osgi.test.spock"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="version" type="Version" value="0.2.0.201410282140"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="9c8f925aae4c67de2825de87bdb5484f8e0c22c029c562cbb04162b590d45e6a"/>
-      <attribute name="url" value="osgi.test.spock/osgi.test.spock-0.1.0.jar"/>
-      <attribute name="size" type="Long" value="532132"/>
+      <attribute name="osgi.content" value="c6194116ba14c037da0dcd42e6f4dc2c0987279ad2369669203ce84042e9a69c"/>
+      <attribute name="url" value="osgi.test.spock/osgi.test.spock-0.2.0.jar"/>
+      <attribute name="size" type="Long" value="532452"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="osgi.test.spock"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="org.osgi.framework,org.spockframework.runtime.extension,org.spockframework.runtime.model"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.builder"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="groovy.lang"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.buildsupport"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.buildsupport.ant"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="org.apache.tools.ant.types.selectors"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.compiler"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="org.codehaus.groovy.ast,org.codehaus.groovy.ast.expr,org.codehaus.groovy.ast.stmt,org.codehaus.groovy.classgen,org.codehaus.groovy.control,org.codehaus.groovy.syntax,org.codehaus.groovy.transform,org.spockframework.compiler.model,org.spockframework.util"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.compiler.model"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="org.codehaus.groovy.ast,org.codehaus.groovy.ast.stmt"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.gentyref"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.idea"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.lang"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="groovy.lang,org.spockframework.mock,org.spockframework.runtime.model"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.mock"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="org.spockframework.runtime,spock.lang"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.mock.constraint"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="groovy.lang,org.spockframework.mock"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.mock.response"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="groovy.lang,org.spockframework.mock"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.mock.runtime"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="groovy.lang,net.sf.cglib.proxy,org.spockframework.mock,spock.lang"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.runtime"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="groovy.lang,org.codehaus.groovy.ast.expr,org.codehaus.groovy.classgen,org.junit,org.junit.runner,org.junit.runner.manipulation,org.junit.runner.notification,org.junit.runners,org.junit.runners.model,org.spockframework.builder,org.spockframework.lang,org.spockframework.mock,org.spockframework.runtime.condition,org.spockframework.runtime.extension,org.spockframework.runtime.model,org.spockframework.util,spock.lang"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.runtime.condition"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.runtime.extension"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="org.spockframework.runtime.model"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.runtime.extension.builtin"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="org.junit.runners.model,org.spockframework.runtime,org.spockframework.runtime.extension,org.spockframework.runtime.model,spock.lang,spock.util.mop"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.runtime.model"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="org.codehaus.groovy.ast,org.codehaus.groovy.syntax,org.junit.runner,org.spockframework.runtime,org.spockframework.runtime.extension"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.util"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="groovy.lang,org.codehaus.groovy.ast,org.codehaus.groovy.ast.expr,org.codehaus.groovy.ast.stmt"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="org.spockframework.util.inspector"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="org.codehaus.groovy.ast,org.codehaus.groovy.ast.expr,org.codehaus.groovy.ast.stmt,org.codehaus.groovy.control"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="spock.config"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="spock.lang"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="groovy.lang,org.junit.runner,org.spockframework.lang,org.spockframework.runtime,org.spockframework.runtime.extension,org.spockframework.runtime.extension.builtin"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="spock.util"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="groovy.lang,org.junit.runner,org.junit.runner.notification"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="spock.util.concurrent"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="groovy.lang,org.spockframework.lang"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="spock.util.matcher"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="groovy.lang,org.hamcrest"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="spock.util.mop"/>
       <attribute name="version" type="Version" value="0.7.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.test.spock"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410250941"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282140"/>
       <directive name="uses" value="org.spockframework.runtime.extension,org.spockframework.runtime.extension.builtin"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
@@ -17348,27 +17401,33 @@
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="osgi.web.common"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.1.0.201410260945"/>
+      <attribute name="version" type="Version" value="0.2.0.201410282141"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="2eb7528c9e54ed42305fbefebf8145a6220bf416bbbc08f32982bcebfc0c3399"/>
-      <attribute name="url" value="osgi.web.common/osgi.web.common-0.1.0.jar"/>
-      <attribute name="size" type="Long" value="2727"/>
+      <attribute name="osgi.content" value="bf471d9182296e0215191839bef4464e38bf58c2f3492fdd308f626eb4e1dd8d"/>
+      <attribute name="url" value="osgi.web.common/osgi.web.common-0.2.0.jar"/>
+      <attribute name="size" type="Long" value="5630"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="osgi.web.common"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410260945"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282141"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="osgi.web.common"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410260945"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282141"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="osgi.web.common"/>
+      <attribute name="version" type="Version" value="0.2.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.web.common"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282141"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="osgi.persistence.common"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="osgi.web.common"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201410260945"/>
+      <attribute name="bundle-version" type="Version" value="0.2.0.201410282141"/>
     </capability>
     <requirement namespace="osgi.ee">
       <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>

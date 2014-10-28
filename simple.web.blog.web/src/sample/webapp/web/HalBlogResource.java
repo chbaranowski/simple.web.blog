@@ -17,6 +17,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.core.UriInfo;
 
+import static osgi.persistence.common.Persistence.*;
 import osgi.web.common.Resource;
 import simple.web.blog.data.Blog;
 import simple.web.blog.data.BlogRepository;
@@ -44,7 +45,7 @@ public class HalBlogResource implements Resource {
         Representation rep = representationFactory.newRepresentation(requestUri);
         List<Blog> posts = blogRepository.findAll();
         for (Blog blog : posts) {
-            URI blogUri = UriBuilder.fromUri(requestUri).path(blog.getId().toString()).build();
+            URI blogUri = UriBuilder.fromUri(requestUri).path(blog.id.toString()).build();
             Representation representation = representationFactory.newRepresentation(blogUri);
             representation.withBean(blog);
             rep.withRepresentation("posts", representation);
@@ -72,7 +73,7 @@ public class HalBlogResource implements Resource {
         blogRepository.save(newBlog);
         List<Blog> blogs = blogRepository.findAll();
         for (Blog blog : blogs) {
-            URI blogUri = UriBuilder.fromUri(requestUri).path(blog.getId().toString()).build();
+            URI blogUri = UriBuilder.fromUri(requestUri).path(blog.id.toString()).build();
             Representation representation = representationFactory.newRepresentation(blogUri);
             representation.withBean(blog);
             rep.withRepresentation("posts", representation);
@@ -84,7 +85,7 @@ public class HalBlogResource implements Resource {
     @Path("/{id}")
     @Produces({RepresentationFactory.HAL_JSON})
     public Representation update(@Context UriInfo uriInfo, @PathParam("id") Long id, Blog blog) {
-    	blog.setId(id);
+    	blog.id = id;
         Blog updatedBlog = blogRepository.save(blog);
         Representation rep = representationFactory.newRepresentation(uriInfo.getRequestUri());
         rep.withBean(updatedBlog);
@@ -100,13 +101,9 @@ public class HalBlogResource implements Resource {
         return rep;
     }
     
-    @Reference(dynamic = true)
+    @Reference(target = isTransactionalService)
     public void setBlogRepository(BlogRepository blogRepository) {
         this.blogRepository = blogRepository;
     }
     
-    public void unsetBlogRepository(BlogRepository blogRepository) {
-        this.blogRepository = null;
-    }
-
 }

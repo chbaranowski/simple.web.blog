@@ -7,8 +7,7 @@
 	halbuilder-core,\
 	halbuilder-json,\
 	osgi.web.common,\
-	simple.web.blog.data,\
-	lombok
+	simple.web.blog.data
 
 Bundle-Version: 0.0.0.${tstamp}
 
@@ -19,12 +18,6 @@ Jetty-WarFolderPath: static
 	static=static,\
 	templates=templates
 	
-Require-Capability: \
-	angular.js,\
-	angular-resource.js,\
-	bootstrap.css,\
-    bootstrap.js
-
 Private-Package:  \
 	sample.webapp.web	
 

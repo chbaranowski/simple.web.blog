@@ -1,5 +1,7 @@
 package sample.webapp.web;
 
+import static osgi.persistence.common.Persistence.*;
+
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -22,17 +24,12 @@ import aQute.bnd.annotation.component.Reference;
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class BlogResource implements Resource {
-
 	
 	BlogRepository blogRepository;
 
-	@Reference(dynamic = true)
+	@Reference(target = isTransactionalService)
 	public void setBlogRepository(BlogRepository blogRepository) {
 		this.blogRepository = blogRepository;
-	}
-
-	public void unsetBlogRepository(BlogRepository blogRepository) {
-		this.blogRepository = null;
 	}
 	
 	@GET

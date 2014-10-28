@@ -1,5 +1,7 @@
 package sample.webapp.web;
 
+import static osgi.persistence.common.Persistence.*;
+
 import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DefaultValue;
@@ -18,24 +20,22 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
 import osgi.web.common.Controller;
+import osgi.web.common.Requieres;
 import simple.web.blog.data.Blog;
 import simple.web.blog.data.BlogRepository;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Reference;
 
+@Requieres.Bootstrap
 @Component
 @Path("/blog")
 public class BlogController implements Controller {
     
     BlogRepository blogRepository;
 
-    @Reference(dynamic = true)
+    @Reference(target = isTransactionalService)
     public void setBlogRepository(BlogRepository blogRepository) {
         this.blogRepository = blogRepository;
-    }
-
-    public void unsetBlogRepository(BlogRepository blogRepository) {
-        this.blogRepository = null;
     }
     
     @GET
@@ -82,9 +82,9 @@ public class BlogController implements Controller {
     
 	static Blog map(BlogPost blogPost) {
 		Blog blog = new Blog();
-        blog.setId(blogPost.id);
-        blog.setTitle(blogPost.title);
-        blog.setContent(blogPost.content);
+        blog.id = blogPost.id;
+        blog.title = blogPost.title;
+        blog.content = blogPost.content;
 		return blog;
 	}
     

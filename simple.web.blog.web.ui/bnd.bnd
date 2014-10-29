@@ -1,3 +1,6 @@
+##
+# Bundle content settings 
+
 Bundle-Version: 0.0.0.${tstamp}
 
 Web-ContextPath: /ui

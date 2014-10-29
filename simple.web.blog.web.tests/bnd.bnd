@@ -43,6 +43,3 @@ Test-Cases:  \
     
 DynamicImport-Package: \
     *
- 
-Import-Package: \
-    *

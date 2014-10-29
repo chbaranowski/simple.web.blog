@@ -17,7 +17,7 @@ entity.path: ${path;${entity.classes}}
 entity.xml: <class>${replace;${entity.path};(${pathseparator});</class>\n    <class>}</class>
 
 ##
-# bundle and MANIFEST.MF content
+# Bundle content settings
 
 Bundle-Version: 0.0.0.${tstamp}
 

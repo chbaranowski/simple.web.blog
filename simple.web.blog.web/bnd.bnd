@@ -1,5 +1,6 @@
+##
+# build configuration
 -buildpath:  \
-	osgi.core,\
 	biz.aQute.bnd.annotation,\
 	cnf.run.http.rest,\
 	cnf.run.jpa.springdata,\
@@ -8,6 +9,9 @@
 	halbuilder-json,\
 	osgi.web.common,\
 	simple.web.blog.data
+
+##
+# bundle and MANIFEST.MF content
 
 Bundle-Version: 0.0.0.${tstamp}
 
@@ -21,8 +25,4 @@ Jetty-WarFolderPath: static
 Private-Package:  \
 	sample.webapp.web	
 
-Service-Component: \
-	*
-
-Import-Package:  \
-	*
+Service-Component: *

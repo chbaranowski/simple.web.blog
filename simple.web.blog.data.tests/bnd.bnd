@@ -1,17 +1,28 @@
+##
+# build configuration
 -buildpath:  \
 	junit,\
 	groovy-all,\
 	osgi.test.spock,\
-	osgi.core,\
-	simple.web.blog.data;version=latest,\
+	simple.web.blog.data,\
 	cnf.run.jpa.springdata
--runpath: groovy-all, osgi.test.spock
+
+##
+# bundle and MANIFEST.MF content
+
 Bundle-Version: 0.0.0.${tstamp}
+
 DynamicImport-Package: *
+
 Private-Package:  \
 	simple.web.blog.data.tests
+
 Test-Cases:  \
 	${classes;CONCRETE;EXTENDS;spock.lang.Specification}
+
+##
+# test run configuration
+-runpath: groovy-all, osgi.test.spock
 	
 -runbundles:  \
 	cnf.run.equinox.common,\

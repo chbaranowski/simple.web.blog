@@ -1,7 +1,5 @@
 package simple.web.blog.data.tests
 
-import org.osgi.framework.BundleContext
-
 import simple.web.blog.data.Blog
 import simple.web.blog.data.BlogRepository;
 import spock.lang.*

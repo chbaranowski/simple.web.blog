@@ -8,7 +8,7 @@
 	cnf.run.jpa.springdata
 
 ##
-# bundle and MANIFEST.MF content
+# Bundle content settings
 
 Bundle-Version: 0.0.0.${tstamp}
 

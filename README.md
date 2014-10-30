@@ -6,7 +6,6 @@ OSGi web app demo.
 
  * Java JDK 8
  * NodeJS
- * GruntJS (npm install -g grunt-cli)
  * Gradle
  * MySQL Database
  * Eclipse

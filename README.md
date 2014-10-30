@@ -9,7 +9,7 @@ OSGi web app demo.
  * Gradle
  * MySQL Database
  * Eclipse
- * Bntools (latest version or 2.4.0.RC1)
+ * Bndtools (latest version or 2.4.0.RC1)
 
 ## Configuration
 

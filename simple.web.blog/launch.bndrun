@@ -3,11 +3,11 @@
 	cnf.run.debug,\
 	cnf.run.db.mysql,\
 	cnf.run.jpa.eclipselink,\
-	simple.web.blog.configuration;version=latest,\
-	simple.web.blog.data;version=latest,\
 	cnf.run.jpa.osgi,\
 	cnf.run.http.rest,\
 	osgi.web.bootstrap,\
 	osgi.web.angularjs,\
+	simple.web.blog.data;version=latest,\
 	simple.web.blog.web;version=latest,\
-	simple.web.blog.web.ui;version=latest
+	simple.web.blog.web.ui;version=latest,\
+	simple.web.blog.configuration;version=latest

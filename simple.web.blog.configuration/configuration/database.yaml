@@ -1,6 +1,6 @@
 punit:
   service.factoryPid:                       "gemini.jpa.punit"
-  gemini.jpa.punit.name:                    "Blog"
+  gemini.jpa.punit.name:                    "simple.web.blog.data"
   eclipselink.target-database:              "MySQL"
 
   javax.persistence.jdbc.driver:            "com.mysql.jdbc.Driver"

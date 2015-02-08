@@ -11,8 +11,6 @@
 
 Bundle-Version: 0.0.0.${tstamp}
 
-DynamicImport-Package: *
-
 Export-Package:  \
 	simple.web.blog.data
 

@@ -1,0 +1,8 @@
+-buildpath:  \
+	biz.aQute.bnd.annotation,\
+	javax.persistence,\
+	org.springframework.data.core,\
+	org.springframework.data.jpa
+
+Export-Package:  \
+	simple.web.blog.data

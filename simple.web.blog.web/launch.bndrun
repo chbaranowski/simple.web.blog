@@ -7,4 +7,5 @@
 	cnf.run.http.rest,\
 	osgi.web.bootstrap,\
 	osgi.web.angularjs,\
-	simple.web.blog
+	simple.web.blog.web,\
+	simple.web.blog.data

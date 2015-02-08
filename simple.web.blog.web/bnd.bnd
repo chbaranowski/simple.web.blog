@@ -3,9 +3,9 @@
 	javax.persistence,\
 	org.springframework.data.core,\
 	org.springframework.data.jpa,\
-	javax.servlet-api,\
 	com.eclipsesource.jaxrs.jersey-all,\
-	osgi.web.common
+	osgi.web.common,\
+	simple.web.blog.data
 
 Web-ContextPath: 	  /static
 Jetty-WarFolderPath:  static
@@ -21,5 +21,4 @@ Export-Package:  \
 Private-Package:  \
 	simple.web.blog.web
 
-Service-Component:  \
-	*
+Service-Component:  *

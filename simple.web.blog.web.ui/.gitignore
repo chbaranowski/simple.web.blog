@@ -1,5 +1,6 @@
 node_modules
 dist
+!dist/README
 .tmp
 .sass-cache
 bower_components

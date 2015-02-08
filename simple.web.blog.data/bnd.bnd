@@ -7,16 +7,6 @@
 	osgi.web.common
 
 ##
-# JPA configuration
-JPA-Repositories: ${classes;IMPLEMENTS;org.springframework.data.jpa.repository.JpaRepository}
-
-Meta-Persistence: persistence.xml
-
-entity.classes: ${classes;ANNOTATION;javax.persistence.Entity}
-entity.path: ${path;${entity.classes}}
-entity.xml: <class>${replace;${entity.path};(${pathseparator});</class>\n    <class>}</class>
-
-##
 # Bundle content settings
 
 Bundle-Version: 0.0.0.${tstamp}
@@ -25,9 +15,6 @@ DynamicImport-Package: *
 
 Export-Package:  \
 	simple.web.blog.data
-
-Include-Resource:  \
-	{${Meta-Persistence}=src/persistence.xml}
 
 Private-Package:  \
 	simple.web.blog.data.jpa

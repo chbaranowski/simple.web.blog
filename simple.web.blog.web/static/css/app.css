@@ -1,8 +1,0 @@
-table tr td:last-child {
-    white-space: nowrap;
-    width: 100px;
-}
-
-table tr td:last-child {
-    text-align: right;
-}

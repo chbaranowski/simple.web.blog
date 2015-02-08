@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>OSGi Blog Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    
+    {{#resource type="css"}}
+		/styles/main.css
+	{{/resource}}
+    
+  </head>
+  <body ng-app="blogApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted">OSGi Blog</h3>
+      </div>
+      
+      <!-- views -->
+      <div ng-view=""></div>
+    
+      <div class="footer">
+        <p><span class="glyphicon glyphicon-heart"></span> OSGi - Christian Baranowksi</p>
+      </div>
+    </div>
+
+    <script src="/angularjs/1.2.21/angular.js"></script>
+    <script src="/angularjs/1.2.21/angular-resource.js"></script>
+    <script src="/angularjs/1.2.21/angular-cookies.js"></script>
+    <script src="/angularjs/1.2.21/angular-sanitize.js"></script>
+    <script src="/angularjs/1.2.21/angular-animate.js"></script>
+    <script src="/angularjs/1.2.21/angular-touch.js"></script>
+    <script src="/angularjs/1.2.21/angular-route.js"></script>
+    
+    <script src="/static/scripts/app.js"></script>
+    <script src="/static/scripts/controllers/main.js"></script>
+    <script src="/static/scripts/controllers/post.js"></script>
+    <script src="/static/scripts/directives/formgroup.js"></script>
+    
+</body>
+</html>

@@ -1,5 +1,0 @@
-task grunt(type: Exec) {
-	commandLine 'grunt'
-}
-
-processResources.dependsOn grunt

@@ -1,0 +1,23 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.marketing {
+  margin: 40px 0;
+}
+
+table tr td:last-child {
+    text-align: right;
+}
+
+table tr td:last-child {
+    white-space: nowrap;
+    width: 100px;
+}

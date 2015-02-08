@@ -7,7 +7,4 @@
 	cnf.run.http.rest,\
 	osgi.web.bootstrap,\
 	osgi.web.angularjs,\
-	simple.web.blog.data;version=latest,\
-	simple.web.blog.web;version=latest,\
-	simple.web.blog.web.ui;version=latest,\
-	simple.web.blog.configuration;version=latest
+	simple.web.blog

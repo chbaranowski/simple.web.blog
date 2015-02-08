@@ -1,9 +1,0 @@
-node_modules
-dist
-!dist/README
-.tmp
-.sass-cache
-bower_components
-bin
-bin_test
-generated

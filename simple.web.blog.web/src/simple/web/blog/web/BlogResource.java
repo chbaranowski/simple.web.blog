@@ -1,7 +1,5 @@
 package simple.web.blog.web;
 
-import static osgi.persistence.common.Persistence.isTransactionalService;
-
 import java.util.List;
 
 import javax.ws.rs.DELETE;
@@ -22,33 +20,37 @@ import aQute.bnd.annotation.component.Reference;
 @Path("/rest/blog")
 public class BlogResource implements Resource {
 	
-	BlogRepository blogRepository;
+	BlogRepository blog;
 
-	@Reference(target = isTransactionalService)
-	public void setBlogRepository(BlogRepository blogRepository) {
-		this.blogRepository = blogRepository;
-	}
-	
 	@GET
 	public List<Blog> list() {
-		return blogRepository.findAllByOrderByLastModifiedDesc();
+		return blog.findAll(new Sort(Sort.Direction.DESC, "lastModified"));
 	}
 	
 	@GET
 	@Path("/{postId}")
 	public Blog get(@PathParam("postId") Long id) {
-		return blogRepository.getOne(id);
+		return blog.getOne(id);
 	}
 	
 	@POST
-	public void post(Blog blog) {
-		blogRepository.save(blog);
+	public void post(Blog entry) {
+		blog.save(entry);
 	}
 	
 	@DELETE
 	@Path("/{postId}")
 	public void delete(@PathParam("postId") Long id) {
-		blogRepository.delete(id);
+		blog.delete(id);
+	}
+	
+	@Reference(dynamic = true)
+	public void setBlogRepository(BlogRepository blog) {
+		this.blog = blog;
+	}
+	
+	public void unsetBlogRepository(BlogRepository blog) {
+		this.blog = null;
 	}
 	
 }

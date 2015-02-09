@@ -1,7 +1,6 @@
 package simple.web.blog.web;
 
-import static java.util.Collections.singletonMap;
-
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.ws.rs.GET;
@@ -15,17 +14,18 @@ import osgi.web.common.Controller;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.headers.RequireCapability;
 
-@Requieres.Bootstrap
-@Requieres.AngularJS
 @Component
 @Path("/")
-@Produces( MediaType.TEXT_HTML )
-public class WebApp implements Controller {
+@Requieres.AngularJS @Requieres.Bootstrap
+public class BlogApp implements Controller {
 
 	@GET
     @Template(name="index.hbs")
+	@Produces( MediaType.TEXT_HTML )
     public Map<String, String> get() { 
-		return singletonMap("site_title", "Simple OSGi Blog"); 
+		Map<String, String> model = new HashMap<>();
+		model.put("site_title", "Simple OSGi Blog");
+		return model; 
 	}
 	
 }

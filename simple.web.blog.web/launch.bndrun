@@ -13,4 +13,5 @@
 	osgi.web.bootstrap,\
 	osgi.web.angularjs,\
 	simple.web.blog.web,\
-	simple.web.blog.data
+	simple.web.blog.data,\
+	simple.web.blog.configuration

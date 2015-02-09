@@ -11,13 +11,9 @@ Web-ContextPath: 	  /static
 Jetty-WarFolderPath:  static
 
 Include-Resource:  \
-	{configuration=configuration},\
 	static=static,\
 	templates=templates
 	
-Export-Package:  \
-	simple.web.blog.data
-
 Private-Package:  \
 	simple.web.blog.web
 

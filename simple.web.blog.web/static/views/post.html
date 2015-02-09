@@ -1,7 +1,12 @@
 <div class="row marketing">
 	<form ng-submit="savePost()">
 		<form-group id="post:title"   type="text" title="Title"   model="post.title"></form-group>
-		<form-group id="post:content" type="text" title="Content" model="post.content"></form-group>
+		
+		<div class="form-group">
+		 	<label for="post:content">Content:</label>
+		 	<textarea id="post:content" class="form-control" rows="3" ng-model="post.content"></textarea>
+		</div>
+		
 		<button type="submit" class="btn btn-primary">Save</button>
 		<a ng-href="#/" class="btn btn-default">Cancel</a>
 	</form>

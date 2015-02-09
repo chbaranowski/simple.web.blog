@@ -1,34 +1,20 @@
-<div class="row marketing" ng-hide="!(posts.length > 0)">
-	<h4>Posts</h4>
-	<table class="table table-striped">
-		<thead>
-			<th>#id</th>
-			<th>Title</th>
-			<th>Content</th>
-			<th>&nbsp;</th>
-		</thead>
-		<tbody>
-			<tr ng-repeat="post in posts">
-				<td>{{post.id}}</td>
-				<td>{{post.title}}</td>
-				<td ng-bind-html="post.content"></td>
-				<td>
-					<div class="btn-group">
-						<a class="btn btn-default" ng-href="#/post/{{post.id}}">
-							<span class="glyphicon glyphicon-pencil"></span>
-						</a>
-						<a class="btn btn-default" ng-click="deletePost(post)">
-							<span class="glyphicon glyphicon-trash"></span>
-						</a>
-					</div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="row marketing text-right">
+<div class="row text-right marketing">
   <a ng-href="#/post" class="btn btn-default"> 
-  	<span class="glyphicon glyphicon-plus"></span>
-  	Create Post
+  	<span class="glyphicon glyphicon-plus"></span> Add
   </a>
+</div>
+<div class="row content" ng-hide="!(posts.length > 0)" ng-repeat="post in posts">
+	<h4>{{post.title}}</h4>
+	<hr />
+	<p>
+		{{post.content}}
+	<p/>
+	<div class="btn-group">
+		<a class="btn btn-default" ng-href="#/post/{{post.id}}">
+			<span class="glyphicon glyphicon-pencil"></span>
+		</a>
+		<a class="btn btn-default" ng-click="deletePost(post)">
+			<span class="glyphicon glyphicon-trash"></span>
+		</a>
+	</div>
 </div>

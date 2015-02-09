@@ -1,6 +1,9 @@
 package simple.web.blog.data;
 
+import java.util.Date;
+
 import javax.persistence.*;
+
 import aQute.bnd.annotation.ProviderType;
 
 @ProviderType
@@ -16,5 +19,16 @@ public class Blog {
 
     @Lob
     public String content;
+    
+    @Temporal(TemporalType.TIMESTAMP)
+    public Date lastModified;
+    
+    @Version
+    public Long version;
+    
+    @PrePersist @PreUpdate
+    public void updateLastModified() {
+    	lastModified = new Date();
+    }
     
 }

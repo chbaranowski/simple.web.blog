@@ -9,6 +9,10 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
+.content {
+  margin: 40px 0;
+}
+
 .marketing {
   margin: 40px 0;
 }

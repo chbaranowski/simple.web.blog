@@ -1,5 +1,9 @@
 package simple.web.blog.web;
 
+import static java.util.Collections.singletonMap;
+
+import java.util.Map;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -20,7 +24,9 @@ public class WebApp implements Controller {
 
 	@GET
     @Template(name="index.hbs")
-    public Object get() { return ""; }
+    public Map<String, String> get() { 
+		return singletonMap("site_title", "Simple OSGi Blog"); 
+	}
 	
 }
 

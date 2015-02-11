@@ -12,5 +12,4 @@ OSGi web app demo.
 
 ## Configuration
 
-The configurations e.g. MySQL Database connection config can befound under
-simple.blog/configuration/*.yaml
+The configurations e.g. MySQL Database connection config can befound under simple.web.blog.configuration/configuration/*.yaml
